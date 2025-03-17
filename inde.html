@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend, Eleiza?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8f0f0;
+            color: #4a4a4a;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff66b2;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .heart {
+            color: #ff3333;
+            font-size: 50px;
+            margin-top: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+        .button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #ff66b2;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff3385;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            display: none;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Eleiza!</h1>
+        <h2>I have something special to ask...</h2>
+        <div class="heart">❤️</div>
+        <button class="button" id="askButton">Will you be my girlfriend?</button>
+        <p class="message" id="message">I really like you, Eleiza! I hope this makes you smile. 💕</p>
+    </div>
+
+    <script>
+        document.getElementById('askButton').addEventListener('click', function() {
+            const message = document.getElementById('message');
+            message.style.display = 'block'; // Show the message after the button click
+            document.getElementById('askButton').style.display = 'none'; // Hide the button
+        });
+    </script>
+</body>
+</html>
